@@ -2,7 +2,6 @@
 - hosts: 127.0.0.1
   connection: local
   become: true
-  become_user: ansible
   tasks:
     - name: Update apt repo and cache on all Debian/Ubuntu boxes
       when: ansible_os_family == 'Debian'
